@@ -1,16 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { NgModule } from '@angular/core';
+import { KeyboardShortcutsModule } from 'ng-keyboard-shortcuts';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { NestedComponent } from './nested.component';
+import { MaterialModule } from './material.module';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NestedComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    MaterialModule,
+    KeyboardShortcutsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
